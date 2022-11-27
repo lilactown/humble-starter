@@ -3,11 +3,11 @@
 A commented, minimal example project to get you started with developing desktop
 apps using [HumbleUI](https://github.com/HumbleUI/HumbleUI) and Clojure.
 
-## Devolepment
+## Development
 
-To simply run the app, execute `./scripts/run.sh`.
+To simply run the app, execute `./script/run.sh`.
 
-To start a REPL (including a minimal nREPL server), you can run `./scripts/nrepl.sh`
+To start a REPL (including a minimal nREPL server), you can run `./script/nrepl.sh`
 
 ### Reloading
 
@@ -43,11 +43,11 @@ by running the jack-in command but customizing it. In Emacs, this is
 
 For our purposes, the `user` ns has a `-main` function which handles all of the
 app and nREPL server initialization. The only thing we need to replace the call to
-CIDER's main wiht our own and pass in the middlewares to it.
+CIDER's main with our own and pass in the middlewares to it.
 
 Below, we show the command after we delete the use of the `:cider/nrepl` alias
 and replace it with the `:dev:cider` alias configured in our deps.edn, which
-calls our custom `-main` function wiht the CIDER middlewares
+calls our custom `-main` function with the CIDER middlewares.
 
 ```
 /opt/homebrew/bin/clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version "1.0.0"} cider/cider-nrepl {:mvn/version "0.28.6"}} :aliases {:cider/nrepl {:main-opts ["-m" "nrepl.cmdline" "--middleware" "[cider.nrepl/cider-middleware]"]}}}' -M:dev:cider
@@ -58,7 +58,7 @@ calls our custom `-main` function wiht the CIDER middlewares
 ## Credit
 
 A lot of this code was copied and then modified from the HumbleUI codebase
-itself, as well as [humble-dec](https://github.com/tonsky/humble-deck/) and
+itself, as well as [humble-deck](https://github.com/tonsky/humble-deck/) and
 [humble-animations](https://github.com/oakmac/humble-animations). Thanks to
 @tonsky for developing HumbleUI and releasing so many cool examples, and @oakmac
 for showing me some cool stuff too!
@@ -66,3 +66,4 @@ for showing me some cool stuff too!
 ## License & Copyright
 
 Licensed under MIT. Copyright Will Acton 2022.
+
