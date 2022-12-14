@@ -1,5 +1,5 @@
 {:paths ["src"]
- :deps {io.github.humbleui/humbleui {:git/sha "c3eb2ec04fcccb40cc4a3da44ccda0ef3ccacc01"}}
+ :deps {io.github.humbleui/humbleui {:git/sha "ce1716bdc3e051142f797b20601423e1de44a8ba"}}
  :aliases
  {:dev {:extra-paths ["dev"]
         :extra-deps {nrepl/nrepl {:mvn/version "1.0.0"}
